@@ -2,16 +2,15 @@ class Solution {
 public:
     int numIdenticalPairs(vector<int>& nums) {
         unordered_map<int, int> count;
-        int res = 0;
+        int result = 0;
 
         for(int num : nums){
-            if(count.find(num) != count.end()){
-                res += count[num];
-            }
+            if(count.find(num) != count.end())
+                result += count[num];
             count[num]++;
         }
         
-        return res;
+        return result;
         // Time complexity: O(n)
         // Space complexity: O(n)
     }

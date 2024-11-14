@@ -4,15 +4,15 @@ public:
         string word3;
         int i = 0, j = 0;
         
-        while(A[i] != '\0' && B[i] != '\0'){
+        while(i < A.size() && j < B.size()){ // A[i] != '\0' && B[i] != '\0'
             word3.push_back(A[i++]);
             word3.push_back(B[j++]);
         }
 
-        while(A[i] != '\0')
+        while(i < A.size()) // A[i] != '\0'
             word3.push_back(A[i++]);
 
-        while(B[j] != '\0')
+        while(j < B.size()) // B[j] != '\0'
             word3.push_back(B[j++]);
 
         return word3;

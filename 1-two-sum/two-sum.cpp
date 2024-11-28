@@ -1,18 +1,13 @@
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        
+    vector<int> twoSum(vector<int>& A, int target) {
         unordered_map<int, int> mp;
-
-        for(int i = 0; i < nums.size(); i++){
-            int x = target - nums[i];
-            if(mp.find(x) != mp.end())
-                return {mp[x], i};
-            else
-                mp[nums[i]] = i;
+        for (int i = 0; i < A.size(); ++i) {
+            int t = target - A[i];
+            if (mp.count(t)) return { mp[t], i };
+            mp[A[i]] = i;
         }
         return {};
-        // Time complexity: O(n)
     }
 };
 

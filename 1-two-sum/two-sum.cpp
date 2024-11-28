@@ -7,7 +7,7 @@ public:
             if (mp.count(t)) return { mp[t], i };
             mp[A[i]] = i;
         }
-        return {};
+        return {};  
     }
 };
 
